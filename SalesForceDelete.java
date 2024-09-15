@@ -24,8 +24,8 @@ public class SalesForceDelete {
 		driver.executeScript("arguments[0].click()", clickLead);
 		driver.findElement(By.xpath("//input[@name='Opportunity-search-input']")).sendKeys("Salesforce Automation by Vishal");
 		Thread.sleep(5000);
-		WebElement element = driver.findElement(By.xpath("//div[@class='forceVirtualActionMarker forceVirtualAction']//a[@role='button']"));
-		driver.executeScript("arguments[0].click();", element);
+		WebElement dropDown = driver.findElement(By.xpath("//div[@class='forceVirtualActionMarker forceVirtualAction']//a[@role='button']"));
+		driver.executeScript("arguments[0].click();", dropDown);
 		Thread.sleep(5000);
 		WebElement delete = driver.findElement(By.xpath("//a[@title='Delete']/div"));
 		driver.executeScript("arguments[0].click();", delete);
